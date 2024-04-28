@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+< lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/form.css">
+    </head>
+
+    <body>
+        <div class="form">
+            <!-- <form id="registrationForm" action="http://localhost:3000/register" method="post"> -->
+                <form id="registrationForm" action="/.netlify/functions/api/register" method="post">
+
+                <label for="fullName">Full Name <span class="required" ></span></label>
+                <input type="text" id="fullName" name="fullName" required placeholder="First Middle Surname">
+
+                <label for="age">Age <span class="required"></span></label>
+                <input type="number" id="age" name="age" required min="14" placeholder="Minimum age must be 14 years or older.">
+
+                <label for="address">Address <span class="required"></span></label>
+                <input type="text" id="address" name="address" required placeholder="123 Main Street, Cityville, State, Zip Code">
+
+                <label for="dob">Date of Birth<span class="required"></span></label>
+                <input type="date" id="dob" name="dob" required>
+
+
+                <label for="education">Education<span class="required"></span></label>
+                <input type="text" id="education" name="education" required placeholder="Education">
+
+                <label for="course">Course <span class="required"></span></label>
+                <input type="text" id="course" name="course" required placeholder="Course">
+
+                <label for="college">College <span class="required"></span></label>
+                <input type="text" id="college" name="college" required placeholder="College Name">
+
+                <label for="email">Email <span class="required"></span></label>
+                <input type="email" id="email" name="email" required placeholder="xyz@gmail.com">
+
+                <label for="contactNumber">Contact Number <span class="required"></span></label>
+                <input type="tel" id="contactNumber" name="contactNumber" pattern="[0-9]{10}" required placeholder="xxxxxxxxxx">
+
+                <label for="reference">Reference Name <span class="required"></span></label>
+                <input type="text" id="RefernceName" name="Rname" required placeholder="From whom your heard about us?">
+
+                <input type="submit" value="Register" class="register">
+            </form>
+        </div>
+
+        <script>
+            document.getElementById('registrationForm').addEventListener('submit', function(event) {
+                var isValid = true;
+                var fields = this.querySelectorAll('[required]');
+                fields.forEach(function(field) {
+                    if (!field.value.trim()) {
+                        isValid = false;
+                        field.style.borderColor = 'red';
+                    } else {
+                        field.style.borderColor = '';
+                    }
+                });
+                if (!isValid) {
+                    event.preventDefault();
+                    alert('Please fill in all required fields.');
+                }
+            });
+        </script>
+
+    </body>
+
+    </html>

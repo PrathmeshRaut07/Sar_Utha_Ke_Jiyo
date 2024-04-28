@@ -1,0 +1,66 @@
+.fixed-submit-btn {
+    position: fixed;
+    bottom: 20px;
+    /* Adjust this value to change vertical position */
+    right: 20px;
+    /* Adjust this value to change horizontal position */
+    z-index: 9999;
+    /* Ensure the button stays on top of other content */
+}
+
+.fixed-submit-btn a {
+    display: block;
+    /* Make the link occupy the full space of the container */
+    width: 50px;
+    /* Adjust this value as per the size of your WhatsApp icon */
+    height: 50px;
+    /* Adjust this value as per the size of your WhatsApp icon */
+}
+
+.fixed-submit-btn img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    /* To make the image round */
+}
+
+#registerFooter {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    /* Change color as per your design */
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    /* Change color as per your design */
+    z-index: 1000;
+    /* Ensure it's above other content */
+    /* box-shadow: 50px 1px 20px rgb(5, 108, 150); */
+    box-shadow: 0px 8px 25px 10px #161e26;
+    border-top-left-radius: 100% 90%;
+    border-top-right-radius: 100% 90%;
+}
+
+#registerFooter a {
+    font-family: 'Roboto', sans-serif;
+    /* Change the font family as per your preference */
+    font-size: 20px;
+    /* Adjust the font size as needed */
+    font-weight: bold;
+    /* Optionally adjust font weight */
+    text-decoration: none;
+    /* Remove underline */
+}
+
+.footer-link {
+    color: #161e26;
+    /* Set initial color to white */
+    text-decoration: none;
+    /* Remove default underline */
+}
+
+.footer-link:hover {
+    color: rgb(5, 108, 150);
+    /* Change color to blue on hover */
+}
